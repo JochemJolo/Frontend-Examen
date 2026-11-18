@@ -1,0 +1,60 @@
+:root {
+  --background: #606060;
+  --navBackground: #606060;
+  --bottomBackground: #606060;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+}
+body .topNavBar {
+  max-height: 70px;
+  min-height: 70px;
+  width: 100%;
+  background-color: var(--navBackground);
+  display: flex;
+  align-items: center;
+}
+body .topNavBar .logo {
+  max-height: 50px;
+  max-width: 70px;
+  color: white;
+}
+body .topNavBar .navigation {
+  flex: 1;
+}
+body .topNavBar .navigation .navigationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+body .topNavBar .navigation .navigationContainer li {
+  height: 30px;
+  width: 70px;
+  background-color: white;
+  list-style: none;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .bottomBar {
+  background-color: var(--bottomBackground);
+  max-height: 70px;
+  min-height: 70px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body .bottomBar .bottomText {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
