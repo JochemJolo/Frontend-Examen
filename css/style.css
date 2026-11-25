@@ -1,60 +1,126 @@
-:root {
-  --background: #606060;
-  --navBackground: #606060;
-  --bottomBackground: #606060;
-}
-
 body {
-  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  list-style: none;
+}
+body .Hiding {
+  display: none;
+}
+body .Top-Bar {
+  background-color: black;
+  max-height: 200px;
+  min-height: 55px;
+  width: 100%;
+  padding: 0;
+}
+body .Top-Bar .Left-Logo {
+  font-size: 25px;
+  position: fixed;
+  left: 0;
+}
+body .Top-Bar .Left-Logo .Image-Logo {
+  max-height: 150px;
+  max-width: 200px;
+}
+body .Top-Bar .Top-Text-Line {
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .Top-Bar .Top-Text-Line .Title-Text {
+  font-size: 25px;
+  color: white;
+}
+body .Top-Bar .Profile-Settings {
+  font-size: 25px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+body .Top-Bar .Profile-Settings .Profile-Logo {
+  max-height: 50px;
+  max-width: 50px;
+}
+body .Middle-Container {
+  background-color: grey;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 10px;
+}
+body .Middle-Container .Box-List {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
-body .topNavBar {
-  max-height: 70px;
-  min-height: 70px;
-  width: 100%;
-  background-color: var(--navBackground);
-  display: flex;
+body .Middle-Container .Box-List .Box {
+  background-color: lightgray;
+  padding: 10px;
   align-items: center;
+  display: flex;
+  flex-flow: column;
 }
-body .topNavBar .logo {
-  max-height: 50px;
-  max-width: 70px;
+body .Middle-Container .Box-List .Box .Image-Box {
+  max-height: 125px;
+  max-width: 120px;
+}
+body .Bottom-Bar {
+  background-color: black;
   color: white;
-}
-body .topNavBar .navigation {
-  flex: 1;
-}
-body .topNavBar .navigation .navigationContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-body .topNavBar .navigation .navigationContainer li {
-  height: 30px;
-  width: 70px;
-  background-color: white;
-  list-style: none;
-  margin: 5px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .bottomBar {
-  background-color: var(--bottomBackground);
-  max-height: 70px;
-  min-height: 70px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 50px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
-body .bottomBar .bottomText {
-  padding-top: 20px;
-  font-size: 20px;
+body .Bottom-Bar .Bottom-Text {
+  white-space: nowrap;
+}
+body .Bottom-Bar .Bottom-Text .Cursive {
+  font-style: italic;
+  position: relative;
+  cursor: pointer;
+}
+body .Bottom-Bar .Bottom-Text .Cursive::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: grey;
+  color: white;
+  padding: 4px 8px;
+  border: 2px solid black;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-style: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+}
+body .Bottom-Bar .Bottom-Text .Cursive:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+body #itemDialog {
+  border: none;
+  border-radius: 12px;
+  max-width: 250px;
+  padding: 24px;
+  text-align: center;
+}
+body #itemDialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /*# sourceMappingURL=style.css.map */
