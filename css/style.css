@@ -58,10 +58,37 @@ body .middleContainer {
   max-width: 80%;
   min-width: 80%;
   background-color: white;
-  min-height: 80%;
+  top: 90px;
+  bottom: 80px;
   left: 50%;
-  margin-top: 20px;
-  transform: translate(-50%);
+  transform: translateX(-50%);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body .middleContainer .Forum {
+  margin-top: 10px;
+}
+body .middleContainer .Forum .Forum {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+body .middleContainer .Forum .Forum textarea {
+  resize: none;
+  text-align: center;
+  width: 450px;
+  border-color: gray;
+}
+body .middleContainer .Forum .Forum #vraag {
+  height: 200px;
+}
+body .middleContainer .Forum .Forum button {
+  background-color: #838383;
+  border-radius: 20px;
+  max-width: 100px;
+  min-width: 100px;
+  align-self: center;
 }
 body .middleContainer .Text-Middle {
   text-align: center;
@@ -94,6 +121,9 @@ body .middleContainer .Box-List .Box .Text-Middle {
   text-align: center;
   padding-top: 30px;
 }
+body .Hidden {
+  display: none !important;
+}
 body .bottomBar {
   background-color: var(--bottomBackground);
   max-height: 70px;
@@ -123,6 +153,48 @@ body #itemDialog #dialogImg {
 }
 body #itemDialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  body .topNavBar {
+    justify-content: space-between;
+  }
+  body .navigation {
+    min-width: 0;
+  }
+  body .navigation .navigationContainer {
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+  }
+  body .navigation .navigationContainer li {
+    width: auto;
+    min-width: 0;
+    padding: 5px;
+    margin: 2px;
+    flex: 1;
+  }
+  body .navigation .navigationContainer li a {
+    font-size: 12px;
+  }
+  body .middleContainer {
+    max-height: 75%;
+    min-height: 40%;
+  }
+  body .middleContainer .Box-List {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body .middleContainer .Box-List .Box {
+    min-height: 250px;
+  }
+  body .middleContainer .Forum .Forum textarea {
+    width: 300px;
+  }
+  body .bottomBar .bottomText {
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
